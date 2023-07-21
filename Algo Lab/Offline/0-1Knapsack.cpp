@@ -2,6 +2,7 @@
 using namespace std;
 
 // knapsack function
+
 int knapsack(int W, int wt[], int val[], int n)
 {
     int i, w;
@@ -42,19 +43,10 @@ int knapsack(int W, int wt[], int val[], int n)
 // main function
 int main()
 {
-    int W;
-    cin >> W;
-    int n;
-    cin >> n;
-    int val[n];
-    int wt[n];
-    for (int i = 0; i < n; i++)
-    {
-        cin >> val[i];
-        cin >> wt[i];
-    }
-
-    cout
-        << knapsack(W, wt, val, n) << endl;
+    int val[] = {60, 100, 120};
+    int wt[] = {10, 20, 30};
+    int W = 50;
+    int n = sizeof(val) / sizeof(val[0]);
+    cout << "Maximum value that can be put in a knapsack of capacity " << W << " is " << knapSack(W, wt, val, n) << endl;
     return 0;
 }
