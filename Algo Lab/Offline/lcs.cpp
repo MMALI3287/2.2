@@ -47,8 +47,7 @@ int main()
     cout << "Enter the second word: ";
     cin >> B;
 
-    int lcs_length = LCS(A, B, lcs);
-    cout << "Length of the LCS: " << lcs_length << endl;
+    cout << "Length of the LCS: " << LCS(A, B, lcs) << endl;
     cout << "LCS: " << lcs << endl;
 
     return 0;
