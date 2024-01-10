@@ -1,4 +1,7 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <unordered_map>
+#include <queue>
+
 using namespace std;
 
 struct HuffmanNode
@@ -78,7 +81,7 @@ unordered_map<char, string> getHuffmanTable(char characters[], int frequencies[]
 int main()
 {
     char characters[] = {'a', 'b', 'c', 'd', 'e'};
-    int frequencies[] = {5, 9, 12, 13, 16};
+    int frequencies[] = {25, 20, 15, 10, 30};
     int n = sizeof(characters) / sizeof(characters[0]);
 
     unordered_map<char, string> huffmanTable = getHuffmanTable(characters, frequencies, n);

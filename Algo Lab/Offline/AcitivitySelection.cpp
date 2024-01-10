@@ -3,18 +3,16 @@ using namespace std;
 
 vector<pair<int, int>> activitySelection(vector<pair<int, int>> &activities)
 {
+    int n = activities.size();
     vector<pair<int, int>> selectedActivities;
-
-    sort(activities.begin(), activities.end(), [](const auto &a, const auto &b)
-         { return a.second < b.second; });
-
     selectedActivities.push_back(activities[0]);
-
-    for (size_t i = 1; i < activities.size(); ++i)
+    int lastFinishTime = activities[0].second;
+    for (int i = 1; i < n; i++)
     {
-        if (activities[i].first >= selectedActivities.back().second)
+        if (activities[i].first >= lastFinishTime)
         {
             selectedActivities.push_back(activities[i]);
+            lastFinishTime = activities[i].second;
         }
     }
 
