@@ -6,6 +6,8 @@ float f(float x)
 {
     return x * x - 4 * x - 10;
 }
+
+//main function
 int main()
 {
     float count = 1;
