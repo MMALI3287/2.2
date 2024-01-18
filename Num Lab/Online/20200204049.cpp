@@ -2,12 +2,12 @@
 using namespace std;
 double fx(int func[], int n, double x)
 {
-    double result = func[n];
+    double res = func[n];
     for (int i = n - 1; i >= 0; i--)
     {
-        result = result * x + func[i];
+        res= res* x + func[i];
     }
-    return result;
+    return res;
 }
 int main()
 {
